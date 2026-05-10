@@ -15,9 +15,9 @@
 
 param(
     [string[]]$Envs = @("DoorKey"),
-    [string[]]$Strategies = @("baseline"),
+    [string[]]$Strategies = @("baseline", "state_bonus", "action_bonus"),
     [int[]]$Seeds = @(42),
-    [int]$Timesteps = 512000,
+    [int]$Timesteps = 1024000,
     [int]$Episodes = 100,
     [ValidateSet("auto", "cuda", "cpu")]
     [string]$Device = "cpu",
